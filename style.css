@@ -89,13 +89,18 @@ html {
     transform: translateY(-4px);
 }
 
-header .mobile-heaser {
+header .mobile-header {
     padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header button {
     all: unset;
 }
+
+
 
 .logo {
     height: 50px;
@@ -144,7 +149,6 @@ header button {
  article:hover {
    filter: contrast(150%);
  }
- 
 
  article .icon {
    height: 24px;
@@ -202,6 +206,8 @@ header button {
 footer {
     padding: 16px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a:has(img) {
@@ -211,4 +217,71 @@ footer a:has(img) {
 .social-icons {
     width: 40px;
     height: 40px;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 24px;
+    margin-right: 16px;
+  }
+
+  header .mobile-header .hamburger-icon {
+    display: none;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .desktop-nav a{
+    text-decoration: none;
+    font-size: larger;
+    color: var(--black);
+  }
+
+  .desktop-nav {
+    display: inline-block;
+  }
+
+  .hero {
+    padding: 120px 56px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    max-width: 70%;
+  }
+
+  .articles-container {
+    display: flex;
+  }
+
+  article {
+    padding: 56px;
+  }
+
+  .contact-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .contact-form form {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer .social-icons {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
